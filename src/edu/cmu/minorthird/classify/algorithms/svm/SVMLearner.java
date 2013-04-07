@@ -339,4 +339,14 @@ public class SVMLearner extends BatchClassifierLearner{
 		parameters.C=c;
 	}
 
+    /**
+     * Setting parameters for wi in libsvm
+     * @param c array of class label to give weights
+     * @param w array of weights correspoding to the labels
+     */
+    public void setPrameterWi(int [] c, double w []){
+        parameters.weight = w;
+        parameters.weight_label = c;
+    }
+
 }
